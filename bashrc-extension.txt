@@ -1,0 +1,3 @@
+for f in ~/.scripts/*; do source $f; done
+
+export TERM=xterm-256color
