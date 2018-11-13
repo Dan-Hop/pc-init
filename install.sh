@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo -i
+sudo apt install vim curl
 
-apt install vim 
+./install-docker.sh
 
 exit 0
