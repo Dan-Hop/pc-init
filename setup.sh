@@ -1,13 +1,17 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install vim curl
+sudo apt install vim curl bat
+
+#Custom macro scripts#
+#Add your own scripts to the scripts folder to be added to your system
+######################################################################
+cp -r scripts/ ~/.scripts
+cat bashrc-extension.txt >> ~/.bashrc
 
 #VIM#
 #####
 cp vimrc ~/.vimrc
-cp -r scripts/ ~/.scripts
-cat bashrc-extension.txt >> ~/.bashrc
 #install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -21,6 +25,8 @@ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 #install vim-terraform
 git clone https://github.com/hashivim/vim-terraform.git ~/.vim/bundle/vim-terraform
+#install vim-multi-cursors
+git clone https://github.com/terryma/vim-multiple-cursors
 
 #Install Docker-ce#
 ###################
@@ -57,5 +63,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose --version
 
+#Install Bat#
+#############
+sudo dpkg -i bat-musl_0.9.0_amd64.deb
 
 exit 0
