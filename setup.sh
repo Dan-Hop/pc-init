@@ -31,7 +31,7 @@ git clone https://github.com/terryma/vim-multiple-cursors
 #Install Docker-ce#
 ###################
 sudo apt update
-sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common unzip
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
@@ -66,5 +66,23 @@ docker-compose --version
 #Install Bat#
 #############
 sudo dpkg -i bat-musl_0.9.0_amd64.deb
+
+#Install Terraform#
+###################
+wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
+
+unzip terraform_0.11.10_linux_amd64.zip
+
+sudo mv terraform /usr/local/bin/
+
+terraform --version 
+
+rm terraform_0.11.10_linux_amd64.zip
+
+#Install aws-cli#
+#################
+sudo apt install python3-pip
+
+sudo pip install awscli
 
 exit 0
