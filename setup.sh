@@ -85,4 +85,13 @@ sudo apt install python3-pip
 
 sudo pip install awscli
 
+#Install cert-bot#
+##################
+sudo add-apt-repository ppa:certbot/certbot
+
+sudo apt-get update
+
+sudo apt-get install python-certbot-apache
+
+
 exit 0
