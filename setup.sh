@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install vim curl bat
+sudo apt install vim curl jq
 
 #Custom macro scripts#
 #Add your own scripts to the scripts folder to be added to your system
@@ -93,5 +93,12 @@ sudo apt-get update
 
 sudo apt-get install python-certbot-apache
 
+#Install terminator#
+####################
+sudo add-apt-repository ppa:gnome-terminator/nightly-gtk3
+
+sudo apt update
+
+sudo apt install terminator
 
 exit 0
