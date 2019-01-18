@@ -25,3 +25,4 @@ let g:airline#extensions#tabline#enabled = 1
 colorscheme gruvbox
 set background=dark
 
+command Fixtab set ts=2 noet | retab! | set et ts=4 | retab
