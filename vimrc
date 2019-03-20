@@ -10,7 +10,6 @@ set noshowcmd
 set noshowmode
 set incsearch
 set hlsearch
-set paste
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -26,3 +25,6 @@ colorscheme gruvbox
 set background=dark
 
 command Fixtab set ts=2 noet | retab! | set et ts=4 | retab
+
+map <C-f> :NERDTreeToggle<CR>
+
